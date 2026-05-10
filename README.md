@@ -4,7 +4,7 @@ A simple REST API for managing schools and listing them based on proximity to a 
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 * Node.js
 * Express.js
@@ -13,7 +13,7 @@ A simple REST API for managing schools and listing them based on proximity to a 
 
 ---
 
-# Features
+## What can it do?
 
 * Add schools with:
 
@@ -36,7 +36,7 @@ A simple REST API for managing schools and listing them based on proximity to a 
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```bash
 project-root/
@@ -62,9 +62,9 @@ project-root/
 
 ---
 
-# Local Setup
+## Local Setup
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/stutiwhy/educase-school-management
@@ -73,7 +73,7 @@ cd educase-school-management
 
 ---
 
-## 2. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
@@ -81,7 +81,7 @@ npm install
 
 ---
 
-## 3. Create Environment File
+### 3. Create Environment File
 
 Copy `.env.example` into `.env`
 
@@ -103,7 +103,7 @@ DB_NAME=edc_school_management
 
 ---
 
-## 4. Run Database Schema
+### 4. Run Database Schema
 
 Run the SQL script inside your MySQL/TiDB instance:
 
@@ -128,7 +128,7 @@ VALUES
 
 ---
 
-## 5. Start the Server
+### 5. Start the Server
 
 ```bash
 npm start
@@ -142,13 +142,13 @@ http://localhost:3000
 
 ---
 
-# Live API Base URL
+## Live API Base URL
 
 [on render](https://educase-school-management-fb1d.onrender.com)
 
 ---
 
-# API Endpoints
+## API Endpoints
 
 | Method | Endpoint       | Parameters                                 | Description                              |
 | ------ | -------------- | ------------------------------------------ | ---------------------------------------- |
@@ -157,13 +157,13 @@ http://localhost:3000
 
 ---
 
-# Endpoint Details
+## Endpoint Details
 
-## 1. Add School
+### 1. Add School
 
-### POST `/addSchool`
+#### POST `/addSchool`
 
-### Request Body
+#### Request Body
 
 ```json
 {
@@ -174,7 +174,7 @@ http://localhost:3000
 }
 ```
 
-### Success Response
+#### Success Response
 
 ```json
 {
@@ -190,7 +190,7 @@ http://localhost:3000
 }
 ```
 
-### Validation Errors
+#### Validation Errors
 
 ```json
 {
@@ -203,17 +203,17 @@ http://localhost:3000
 
 ---
 
-## 2. List Schools
+### 2. List Schools
 
-### GET `/listSchools`
+#### GET `/listSchools`
 
-### Example Request
+#### Example Request
 
 ```bash
 /listSchools?latitude=19.0760&longitude=72.8777
 ```
 
-### Success Response
+#### Success Response
 
 ```json
 {
@@ -234,7 +234,7 @@ http://localhost:3000
 
 ---
 
-# Distance Calculation
+## Distance Calculation
 
 This project uses the **Haversine Formula** to calculate the great-circle distance between two geographical coordinates on Earth.
 
@@ -246,13 +246,13 @@ The utility is implemented in:
 
 ---
 
-# Postman Collection
+## Postman Collection
 
 Public Postman collection link:
 
 [json file of collection on drive](https://drive.google.com/file/d/1d_S90oiAUKp1kkL7nnMPqBwE_4b5dPgr/view?usp=sharing&utm_source=chatgpt.com)
 
-### Notes
+#### Notes
 
 * The collection contains **2 environments**:
 
@@ -280,7 +280,7 @@ Variable: baseUrl
 Value: https://educase-school-management-fb1d.onrender.com
 ```
 
-### The collection includes testing for:
+#### The collection includes testing for:
 
 * Successful requests
 * Invalid latitude/longitude cases
@@ -291,7 +291,7 @@ Value: https://educase-school-management-fb1d.onrender.com
 
 ---
 
-# Database Schema
+## Database Schema
 
 ```sql
 CREATE TABLE Schools (
@@ -305,7 +305,7 @@ CREATE TABLE Schools (
 
 ---
 
-# Deployment
+## Deployment
 
 This project can be deployed easily on:
 
@@ -316,6 +316,6 @@ This project can be deployed easily on:
 
 ---
 
-# author
+## author
 
 stuti mishra
